@@ -1,3 +1,9 @@
+export const NOMS_CATEGORIES = ["Frontend Architecture", "Backend & Données", "DevOps, Outils & Tests"] as const;
+export const NOMS_ICONES_LOISIRS = ["plant-pot", "book-text", "gamepad-2", "hammer"] as const;
+
+export type Categorie = (typeof NOMS_CATEGORIES)[number];
+export type IconeLoisir = (typeof NOMS_ICONES_LOISIRS)[number];
+
 export interface CV {
   profil: Profil;
   experiences: Experience[];
@@ -16,6 +22,7 @@ export interface Profil {
   email: string;
   telephone: string;
   ville: string;
+  experience: number;
   permis: string;
   photo: string;
   github?: string;
@@ -26,6 +33,7 @@ export interface Profil {
 export interface Experience {
   id: string;
   entreprise: string;
+  localisation: string;
   dateDebut: string;
   dateFin?: string;
   titre: string;
@@ -39,20 +47,22 @@ export interface Formation {
   diplome: string;
   dateDebut: string;
   dateFin?: string;
+  niveau: string;
 }
 
 export interface Competence {
   nom: string;
-  categorie: "langage" | "front-end" | "donnees et api" | "devops" | "outils";
+  categorie: Categorie;
 }
 
 export interface Langue {
   nom: string;
-  niveau: "debutant" | "intermediaire" | "avance" | "natif";
+  niveau: "Débutant" | "Intermédiaire" | "Avancé" | "Langue maternelle";
 }
 
 export interface Loisir {
   nom: string;
+  icon: IconeLoisir;
 }
 
 export interface Projet {
