@@ -7,21 +7,23 @@ const RootLayout = () => (
   <>
     <NavBar />
 
-    <main>
+    <main className="max-w-site mx-auto px-6">
       <Outlet />
     </main>
 
-    <footer>
-      {cv.profil.github && (
-        <a target="_blank" href={cv.profil.github}>
-          Github
-        </a>
-      )}
-      {cv.profil.linkedin && (
-        <a target="_blank" href={cv.profil.linkedin}>
-          Linkedin
-        </a>
-      )}
+    <footer className="bg-fond">
+      <div className="max-w-site mx-auto px-6">
+        {cv.profil.github && (
+          <a target="_blank" href={cv.profil.github}>
+            Github
+          </a>
+        )}
+        {cv.profil.linkedin && (
+          <a target="_blank" href={cv.profil.linkedin}>
+            Linkedin
+          </a>
+        )}
+      </div>
     </footer>
     <TanStackRouterDevtools />
   </>

@@ -10,13 +10,11 @@
   --color-texte: #151d19;
   --color-texte-doux: #58685c;
   --color-primaire: #2e4f3e;
-} 
 
-#root {
-  max-width: 1400px;
-  margin: auto;
-}
+  --container-site: 1400px;
+} 
 
 html {
   background-color: var(--color-fond);
+  scrollbar-gutter: stable;
 }

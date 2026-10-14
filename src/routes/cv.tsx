@@ -17,7 +17,7 @@ function CV() {
 
   return (
     <>
-      <header>
+      <header className="mt-10">
         <h1 className="text-4xl font-bold mb-5">Mon Parcours & Compétences</h1>
         <p className="mb-10">{cv.profil.description}</p>
       </header>
