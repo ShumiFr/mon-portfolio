@@ -7,8 +7,3 @@ export const ICONES_LOISIRS = {
   "hammer": Hammer,
   "gamepad-2": Gamepad2,
 } satisfies Record<IconeLoisir, LucideIcon>;
-
-export const OPTIONS_PRECISION = {
-  mois: { month: "long", year: "numeric" },
-  annee: { year: "numeric" },
-};

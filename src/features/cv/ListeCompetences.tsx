@@ -15,8 +15,8 @@ const ListeCompetences = ({ cv }: { cv: CV }) => {
             <h3 className="font-jet text-sm mt-5">{categorie}</h3>
             <ul>
               {competences.map((competence) => (
-                <li className="flex items-center bg-[#EDF6EE] my-2 py-1 px-3 rounded-xl text-sm gap-2 font-semibold" key={competence.nom}>
-                  <LineDotLeftHorizontal color="#D96B43" />
+                <li className="flex items-center bg-surface my-2 py-1 px-3 rounded-xl text-sm gap-2 font-semibold" key={competence.nom}>
+                  <LineDotLeftHorizontal className="text-accent" />
                   {competence.nom}
                 </li>
               ))}

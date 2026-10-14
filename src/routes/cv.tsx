@@ -5,6 +5,7 @@ import { Briefcase, CodeXml, Compass, GraduationCap, House, Languages } from "lu
 import FormationItem from "../features/cv/FormationItem";
 import ListeCompetences from "../features/cv/ListeCompetences";
 import { ICONES_LOISIRS } from "../utils/icons";
+import Card from "../features/cv/Card";
 
 export const Route = createFileRoute("/cv")({
   component: CV,
@@ -25,68 +26,52 @@ function CV() {
         {/*GAUCHE*/}
         <div className="basis-1/3">
           {/*Informations Clés*/}
-          <section className="bg-white rounded-2xl p-7 text-black shadow-md my-5">
-            <div className="flex gap-2 mb-5">
-              <Compass color="#D96B43" />
-              <h2>Informations Clés</h2>
-            </div>
+          <Card icone={Compass} titre="Informations Clés">
             <dl className="grid grid-cols-2 gap-5">
-              <div className="rounded-xl bg-[#EDF6EE] p-4">
-                <dt className="font-jet text-gray-600">Localisation</dt>
+              <div className="rounded-xl bg-surface p-4">
+                <dt className="font-jet text-texte-doux">Localisation</dt>
                 <dd className="font-semibold">{cv.profil.ville}</dd>
               </div>
 
-              <div className="rounded-xl bg-[#EDF6EE] p-4">
-                <dt className="font-jet text-gray-600">Expérience</dt>
+              <div className="rounded-xl bg-surface p-4">
+                <dt className="font-jet text-texte-doux">Expérience</dt>
                 <dd className="font-semibold">
                   {cv.profil.experience} {cv.profil.experience > 1 ? "ans" : "an"}
                 </dd>
               </div>
             </dl>
-          </section>
+          </Card>
 
           {/*Stack & Compétences*/}
-          <section className="bg-white rounded-2xl p-7 text-black shadow-md my-5">
-            <div className="flex gap-2">
-              <CodeXml color="#D96B43" />
-              <h2>Stack & Compétences</h2>
-            </div>
+          <Card icone={CodeXml} titre="Stack & Compétences">
             <ListeCompetences cv={cv} />
-          </section>
+          </Card>
 
           {/*Langues*/}
-          <section className="bg-white rounded-2xl p-7 text-black shadow-md my-5">
-            <div className="flex gap-2 mb-5">
-              <Languages color="#D96B43" />
-              <h2>Langues</h2>
-            </div>
+          <Card icone={Languages} titre="Langues">
             <dl className="flex flex-col gap-3">
               {cv.langues.map((langue) => (
                 <div key={langue.nom}>
-                  <dt className="font-jet text-gray-600">{langue.nom}</dt>
+                  <dt className="font-jet text-texte-doux">{langue.nom}</dt>
                   <dd className="font-semibold">{langue.niveau}</dd>
                 </div>
               ))}
             </dl>
-          </section>
+          </Card>
 
           {/*Centres d'interêt*/}
-          <section className="bg-white rounded-2xl p-7 text-black shadow-md my-5">
-            <div className="flex gap-2 mb-5">
-              <House color="#D96B43" />
-              <h2>Centres d'intérêt</h2>
-            </div>
+          <Card icone={House} titre="Centres d'intérêt">
             <ul>
               {cv.loisirs.map((loisir) => {
                 const Icone = ICONES_LOISIRS[loisir.icon];
                 return (
-                  <li key={loisir.nom} className="flex bg-[#EDF6EE] my-2 p-2 rounded-xl gap-2">
+                  <li key={loisir.nom} className="flex bg-surface my-2 p-2 rounded-xl gap-2">
                     <Icone /> {loisir.nom}
                   </li>
                 );
               })}
             </ul>
-          </section>
+          </Card>
         </div>
 
         {/*DROITE*/}
@@ -94,7 +79,7 @@ function CV() {
           {/*Experiences Professionnelles*/}
           <section>
             <div className="flex gap-5 text-3xl items-center">
-              <div className="bg-[#DCE5DD] p-2 rounded-full">
+              <div className="bg-surface p-2 rounded-full">
                 <Briefcase />
               </div>
               <h2 className="font-bold">Expériences Professionnelles</h2>
@@ -109,7 +94,7 @@ function CV() {
           {/*Formations & Diplômes*/}
           <section>
             <div className="flex gap-5 text-3xl items-center my-10">
-              <div className="bg-[#DCE5DD] p-2 rounded-full">
+              <div className="bg-surface p-2 rounded-full">
                 <GraduationCap />
               </div>
               <h2 className="font-bold">Formations & Diplômes</h2>

@@ -5,7 +5,7 @@ const NavBar = () => {
     <header className="p-2 shadow-2xl">
       <div></div>
 
-      <nav className="flex gap-4 bg-[#EAF3EB]">
+      <nav className="flex gap-4 bg-surface">
         <Link to="/" className="[&.active]:font-bold">
           Accueil
         </Link>

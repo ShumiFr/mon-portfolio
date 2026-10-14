@@ -1,15 +1,22 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: "Plus Jakarta Sans", sans-serif;
   --font-jet: "JetBrains Mono", monospace;
-}
+  --color-surface: #edf6ee;
+  --color-fond: #f3fcf3;
+  --color-surface-fonce: #dce5dd;
+  --color-accent: #d96b43;
+  --color-texte: #151d19;
+  --color-texte-doux: #58685c;
+  --color-primaire: #2e4f3e;
+} 
 
 #root {
-  font-family: "Plus Jakarta Sans", sans-serif;
   max-width: 1400px;
   margin: auto;
 }
 
 html {
-  background-color: #F3FCF3;
+  background-color: var(--color-fond);
 }
