@@ -1,30 +1,20 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import cv from "../data/cv";
 import NavBar from "../features/NavBar";
+import Footer from "../features/Footer";
 
 const RootLayout = () => (
   <>
-    <NavBar />
+    <div className="min-h-screen flex flex-col">
+      <NavBar />
 
-    <main className="max-w-site mx-auto px-6">
-      <Outlet />
-    </main>
+      <main className="flex-1 pb-16 max-w-site mx-auto px-6">
+        <Outlet />
+      </main>
 
-    <footer className="bg-fond">
-      <div className="max-w-site mx-auto px-6">
-        {cv.profil.github && (
-          <a target="_blank" href={cv.profil.github}>
-            Github
-          </a>
-        )}
-        {cv.profil.linkedin && (
-          <a target="_blank" href={cv.profil.linkedin}>
-            Linkedin
-          </a>
-        )}
-      </div>
-    </footer>
+      <Footer />
+    </div>
+
     <TanStackRouterDevtools />
   </>
 );

@@ -85,9 +85,9 @@ const formationsData = [
     niveau: "Diplôme certifiée RNCP Niveau 5",
   },
   {
-    id: "f-developpeur-application",
+    id: "f-developpeur-concepteur-logiciel",
     ecole: "OpenClassrooms",
-    diplome: "Développeur d'application - Javascript React",
+    diplome: "Développeur Concepteur Logiciel",
     dateDebut: "2024",
     dateFin: "2025",
     niveau: "Diplôme certifiée RNCP Niveau 6",

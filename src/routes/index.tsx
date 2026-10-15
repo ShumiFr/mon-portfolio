@@ -1,18 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import cv from "../data/cv";
+import Accueil from "../pages/Accueil";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: Accueil,
 });
-
-function Index() {
-  return (
-    <>
-      <h1>Mon Profil</h1>
-      <p>
-        Je m'appelle {cv.profil.nom} {cv.profil.prenom}, je suis{" "}
-        {cv.profil.metier}.
-      </p>
-    </>
-  );
-}
