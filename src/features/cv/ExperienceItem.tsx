@@ -1,6 +1,6 @@
 import type { Experience } from "../../types/cv";
 import { Dot } from "lucide-react";
-import { formaterPeriode } from "../../utils/dates";
+import Periode from "./Periode";
 import { ArrowRight } from "lucide-react";
 
 const ExperienceItem = ({ experience }: { experience: Experience }) => {
@@ -15,9 +15,9 @@ const ExperienceItem = ({ experience }: { experience: Experience }) => {
             <p className="font-light text-sm">{experience.localisation}</p>
           </div>
         </div>
-        <div>
-          <time dateTime={formaterPeriode(experience.dateDebut, experience.dateFin)}>{formaterPeriode(experience.dateDebut, experience.dateFin)}</time>
-        </div>
+        <p>
+          <Periode dateDebut={experience.dateDebut} dateFin={experience.dateFin} />
+        </p>
       </header>
 
       <ul>
