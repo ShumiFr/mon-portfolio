@@ -5,10 +5,9 @@ import FormationItem from "../features/cv/FormationItem";
 import ListeCompetences from "../features/cv/ListeCompetences";
 import { ICONES_LOISIRS } from "../utils/icons";
 import Card from "../features/cv/Card";
+import { formationsTriees, experiencesTriees } from "../utils/tri";
 
 export default function CVPage() {
-  const experiencesTriees = [...cv.experiences].sort((a, b) => b.dateDebut.localeCompare(a.dateDebut));
-  const formationsTriees = [...cv.formations].sort((a, b) => b.dateDebut.localeCompare(a.dateDebut));
 
   return (
     <>
@@ -74,7 +73,7 @@ export default function CVPage() {
           {/*Experiences Professionnelles*/}
           <section>
             <div className="flex gap-5 text-3xl items-center">
-              <div className="bg-surface p-2 rounded-full">
+              <div className="bg-secondaire text-white p-2 rounded-2xl">
                 <Briefcase />
               </div>
               <h2 className="font-bold">Expériences Professionnelles</h2>
@@ -89,7 +88,7 @@ export default function CVPage() {
           {/*Formations & Diplômes*/}
           <section>
             <div className="flex gap-5 text-3xl items-center my-10">
-              <div className="bg-surface p-2 rounded-full">
+              <div className="bg-secondaire text-white p-2 rounded-2xl">
                 <GraduationCap />
               </div>
               <h2 className="font-bold">Formations & Diplômes</h2>

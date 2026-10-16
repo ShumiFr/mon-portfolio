@@ -4,7 +4,7 @@ const profilData = {
   nom: "Gagnaire",
   prenom: "Pauline",
   metier: "Développeuse Frontend",
-  description: "Développeuse web rêvant de travailler dans le développement spatial. Focus sur React, TypeScript et Tailwind CSS, avec une montée en compétences full-stack en cours.",
+  description: "Développeuse Front-End passionnée par l'informatique et l'astronomie, toujours en quête de savoir.",
   email: "gagnaire.pauline@gmail.com",
   telephone: "06 06 99 36 56",
   ville: "Chambéry & ses alentours",
@@ -15,6 +15,7 @@ const profilData = {
   linkedin: "https://www.linkedin.com/in/pauline-gagnaire-122a04246",
   site: "https://pauline-gagnaire.netlify.app/",
   disponibilite: "En recherche de CDI pour le début d'année prochaine",
+  accroche: "Je conçois des applications web",
 } satisfies Profil;
 
 const experienceData = [
@@ -64,7 +65,7 @@ const formationsData = [
   {
     id: "f-bac-boulangerie-patisserie",
     ecole: "Lycée Roberval Breuil-le-Vert",
-    diplome: "Baccalauréat Professionnel Boulanger-Pâtissier",
+    diplome: "Baccalauréat Professionnel Boulanger-Pâtissier (Bac)",
     dateDebut: "2018",
     dateFin: "2019",
     niveau: "Bac",
@@ -72,7 +73,7 @@ const formationsData = [
   {
     id: "f-mention-complementaire",
     ecole: "CFA des métiers Laon",
-    diplome: "Mention Complémentaire Pâtissier Chocolatier Glacier Confiseur",
+    diplome: "Mention Complémentaire Pâtissier Chocolatier Glacier Confiseur (Bac+1)",
     dateDebut: "2019",
     dateFin: "2020",
     niveau: "Bac+1",
@@ -80,7 +81,7 @@ const formationsData = [
   {
     id: "f-developpeur-integrateur-web",
     ecole: "OpenClassrooms",
-    diplome: "Développeur Intégrateur Web",
+    diplome: "Développeur Intégrateur Web (Bac+2)",
     dateDebut: "2022",
     dateFin: "2023",
     niveau: "Diplôme certifié RNCP Niveau 5",
@@ -88,7 +89,7 @@ const formationsData = [
   {
     id: "f-developpeur-concepteur-logiciel",
     ecole: "OpenClassrooms",
-    diplome: "Développeur Concepteur Logiciel",
+    diplome: "Développeur Concepteur Logiciel (Bac+3)",
     dateDebut: "2024",
     dateFin: "2025",
     niveau: "Diplôme certifié RNCP Niveau 6",

@@ -31,6 +31,7 @@ export interface Profil {
   linkedin?: string;
   site?: string;
   disponibilite?: string;
+  accroche: string;
 }
 
 export interface Experience {

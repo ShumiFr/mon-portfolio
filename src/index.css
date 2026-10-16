@@ -1,20 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Plus Jakarta Sans", sans-serif;
-  --font-jet: "JetBrains Mono", monospace;
-  --color-surface: #edf6ee;
-  --color-fond: #f3fcf3;
-  --color-surface-fonce: #dce5dd;
-  --color-accent: #d96b43;
-  --color-texte: #151d19;
-  --color-texte-doux: #58685c;
-  --color-primaire: #2e4f3e;
+   --font-sans: "Plus Jakarta Sans", sans-serif;
+   --font-jet: "JetBrains Mono", monospace;
+   --color-surface: #edf6ee;
+   --color-fond: #f3fcf3;
+   --color-surface-fonce: #dce5dd;
+   --color-accent: #d96b43;
+   --color-texte: #151d19;
+   --color-texte-doux: #58685c;
+   --color-primaire: #2e4f3e;
+   --color-secondaire: #b85430;
 
-  --container-site: 1400px;
-} 
+   --container-site: 1400px;
+
+   --animate-flotter: flotter 3s ease-in-out infinite;
+
+   @keyframes flotter {
+      0%,
+      100% {
+         transform: translateY(0);
+      }
+      50% {
+         transform: translateY(-8px);
+      }
+   }
+}
 
 html {
-  background-color: var(--color-fond);
-  scrollbar-gutter: stable;
+   background-color: var(--color-fond);
+   scrollbar-gutter: stable;
 }

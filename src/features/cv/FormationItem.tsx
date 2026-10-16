@@ -3,7 +3,7 @@ import Periode from "./Periode";
 
 const FormationItem = ({ formation }: { formation: Formation }) => {
   return (
-    <article className="bg-white p-5 rounded-2xl flex flex-col">
+    <article className="bg-white p-5 rounded-2xl flex flex-col shadow-md">
       <p className="bg-surface rounded-xl px-5 py-1 mb-5 w-fit font-jet text-sm font-light">
         <Periode dateDebut={formation.dateDebut} dateFin={formation.dateFin} precision="annee" />
       </p>
