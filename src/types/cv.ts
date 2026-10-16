@@ -1,8 +1,10 @@
 export const NOMS_CATEGORIES = ["Frontend Architecture", "Backend & Données", "DevOps, Outils & Tests"] as const;
 export const NOMS_ICONES_LOISIRS = ["plant-pot", "book-text", "gamepad-2", "hammer"] as const;
+export const NOMS_CONTEXTE_PROJETS = ["Formation", "Personnel", "Professionnel"] as const;
 
 export type Categorie = (typeof NOMS_CATEGORIES)[number];
 export type IconeLoisir = (typeof NOMS_ICONES_LOISIRS)[number];
+export type ContexteProjet = (typeof NOMS_CONTEXTE_PROJETS)[number];
 
 export interface CV {
   profil: Profil;
@@ -28,6 +30,7 @@ export interface Profil {
   github?: string;
   linkedin?: string;
   site?: string;
+  disponibilite?: string;
 }
 
 export interface Experience {
@@ -53,6 +56,7 @@ export interface Formation {
 export interface Competence {
   nom: string;
   categorie: Categorie;
+  principale?: boolean;
 }
 
 export interface Langue {
@@ -74,4 +78,5 @@ export interface Projet {
   demo?: string;
   image: string;
   misEnAvant?: boolean;
+  contexte: ContexteProjet;
 }

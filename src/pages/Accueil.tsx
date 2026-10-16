@@ -1,10 +1,9 @@
 export default function Accueil() {
   return (
     <>
-      <div>{/* Hero banner */}</div>
-      <div>{/* Projets à la Une */}</div>
-      <div>{/* Dernières réflexions & Veille */}</div>
-      <div>{/* Contact */}</div>
+      <section>{/* Hero banner */}</section>
+      <section>{/* Projets à la Une */}</section>
+      <section>{/* Contact */}</section>
     </>
   );
 }

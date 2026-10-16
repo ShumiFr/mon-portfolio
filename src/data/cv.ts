@@ -4,7 +4,7 @@ const profilData = {
   nom: "Gagnaire",
   prenom: "Pauline",
   metier: "Développeuse Frontend",
-  description: "Développeuse web révant de travailler dans le développement spatial. Focus sur React, TypeScript et Tailwind CSS, avec une montée en compétences full-stack en cours.",
+  description: "Développeuse web rêvant de travailler dans le développement spatial. Focus sur React, TypeScript et Tailwind CSS, avec une montée en compétences full-stack en cours.",
   email: "gagnaire.pauline@gmail.com",
   telephone: "06 06 99 36 56",
   ville: "Chambéry & ses alentours",
@@ -14,6 +14,7 @@ const profilData = {
   github: "https://github.com/ShumiFr",
   linkedin: "https://www.linkedin.com/in/pauline-gagnaire-122a04246",
   site: "https://pauline-gagnaire.netlify.app/",
+  disponibilite: "En recherche de CDI pour le début d'année prochaine",
 } satisfies Profil;
 
 const experienceData = [
@@ -82,7 +83,7 @@ const formationsData = [
     diplome: "Développeur Intégrateur Web",
     dateDebut: "2022",
     dateFin: "2023",
-    niveau: "Diplôme certifiée RNCP Niveau 5",
+    niveau: "Diplôme certifié RNCP Niveau 5",
   },
   {
     id: "f-developpeur-concepteur-logiciel",
@@ -90,17 +91,17 @@ const formationsData = [
     diplome: "Développeur Concepteur Logiciel",
     dateDebut: "2024",
     dateFin: "2025",
-    niveau: "Diplôme certifiée RNCP Niveau 6",
+    niveau: "Diplôme certifié RNCP Niveau 6",
   },
 ] satisfies Formation[];
 
 const competencesData = [
   { nom: "HTML / CSS", categorie: "Frontend Architecture" },
-  { nom: "TypeScript", categorie: "Frontend Architecture" },
-  { nom: "React", categorie: "Frontend Architecture" },
+  { nom: "TypeScript", categorie: "Frontend Architecture", principale: true },
+  { nom: "React", categorie: "Frontend Architecture", principale: true },
   { nom: "Redux / Zustand", categorie: "Frontend Architecture" },
   { nom: "React Router / TanStack Router", categorie: "Frontend Architecture" },
-  { nom: "Tailwind CSS / SASS", categorie: "Frontend Architecture" },
+  { nom: "Tailwind CSS", categorie: "Frontend Architecture", principale: true },
   { nom: "Shadcn", categorie: "Frontend Architecture" },
   { nom: "API REST", categorie: "Backend & Données" },
   { nom: "Axios / Fetch", categorie: "Backend & Données" },
@@ -128,6 +129,17 @@ const projetsData = [
     description: "Outil de gestion associative",
     technologies: ["React", "TypeScript", "Tailwind CSS", "TanStack Router"],
     image: "https://placehold.co/900x500?text=Frequencies",
+    misEnAvant: true,
+    contexte: "Professionnel",
+  },
+  {
+    id: "p-nestor",
+    nom: "Nestor",
+    description: "Outil de gestion budgétaire",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "TanStack Router"],
+    image: "https://placehold.co/900x500?text=Nestor",
+    misEnAvant: true,
+    contexte: "Personnel",
   },
 ] satisfies Projet[];
 

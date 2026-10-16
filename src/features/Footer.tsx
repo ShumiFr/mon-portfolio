@@ -2,12 +2,14 @@ import cv from "../data/cv";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Mail } from "lucide-react";
 
+const ANNEE = new Date().getFullYear();
+
 export default function Footer() {
   return (
     <footer className="bg-surface border-t border-surface-fonce">
       <div className="max-w-site mx-auto px-6 py-8 flex items-center justify-between text-sm text-texte-doux">
         <span>
-          © {new Date().getFullYear()} {cv.profil.prenom} {cv.profil.nom}
+          © {ANNEE} {cv.profil.prenom} {cv.profil.nom}
         </span>
         <ul className="flex gap-5">
           {cv.profil.github && (
