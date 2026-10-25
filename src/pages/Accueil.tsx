@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import cv from "../data/cv";
 import { ArrowRight, FileText, MapPin, NotebookPen, BadgeCheck, PlantPot, Zap } from "lucide-react";
 import { formationsTriees } from "../utils/tri";
+import ProjetCard from "../features/projets/ProjetCard";
 
 export default function Accueil() {
   const competencesPrincipales = cv.competences.filter((competence) => competence.principale);
@@ -79,7 +80,16 @@ export default function Accueil() {
           </div>
         </div>
       </section>
-      <section>{/* Projets à la Une */}</section>
+      <section className="my-16">
+        <h2 className="text-4xl font-bold tracking-tight text-primaire mb-5">Projets mis en avant</h2>
+        <div className="grid grid-cols-3 gap-4">
+          {cv.projets
+            .filter((projet) => projet.misEnAvant)
+            .map((projet) => (
+              <ProjetCard key={projet.id} projet={projet} />
+            ))}
+        </div>
+      </section>
       <section>{/* Contact */}</section>
     </>
   );
